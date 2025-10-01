@@ -41,9 +41,7 @@
     </svg>
   </button>
   </div>
-</header>
-
-<!-- Mobile Nav -->
+  <!-- Mobile Nav -->
 <nav id="mobile-menu" class="hidden lg:hidden bg-black text-white px-6 py-4">
   <ul class="flex flex-col gap-6 font-[500] text-[16px] font-Montserrat">
     <li><a href="#home" class="nav-link">Home</a></li>
@@ -53,6 +51,9 @@
     <li><a href="#register" class="header-btn inline-block">Register Now</a></li>
   </ul>
 </nav>
+</header>
+
+
 
 <!-- hero section  -->
 <section id="home" style="background-image: url(assets/Images/AI\ summit\ hero\ image.png); background-size: cover; background-position: center; height: 100vh;">
@@ -102,6 +103,8 @@ data-aos="zoom-in"
         data-aos-duration="2000"
 >
         
+
+
         <div class="pillar ministry-card group">
             <div class="absolute inset-0 overflow-hidden">
                 <img src="assets/Images/Tech.png" 
@@ -190,9 +193,9 @@ By attending, you’ll connect with innovators, thought leaders, and professiona
 
 <!-- last section   -->
  
-<section class="bg-black relative">
-  <div class="relative h-[200px] lg:h-[300px] max-w-[1320px] mx-auto px-6 ">
-    <div class="absolute -top-10 lg:-top-15 left-0  ">
+<section class="bg-black relative px-6 pb-50 md:pb-0">
+  <div class="relative h-[200px] lg:h-[300px] max-w-[1320px] mx-auto  ">
+    <div class="absolute -top-10 lg:-top-15  ">
       <h4>
        An immersive experience where innovators, leaders, and creators come together to explore the future of artificial intelligence. Secure your spot today and be part of the movement shaping what’s next.
       </h4>
@@ -285,6 +288,16 @@ Boston, MA 02116
       header.classList.remove('sticky');
     }
   });
+
+  // hide menu after clicking
+  const mobileLinks = document.querySelectorAll("#mobile-menu a");
+
+mobileLinks.forEach(link => {
+  link.addEventListener("click", () => {
+    mobileMenu.classList.add("hidden"); 
+  });
+});
+
 
 //active link on scroll
 const sections = document.querySelectorAll("section");
